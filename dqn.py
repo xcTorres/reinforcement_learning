@@ -1,6 +1,4 @@
-from array import array
 import random
-from xml.sax.saxutils import prepare_input_source
 import gym
 import numpy as np
 import tensorflow as tf
@@ -65,7 +63,6 @@ class DQNSolver:
         done_sample = np.array([self.memory[i][4] for i in indices])
 
         future_rewards = self.model.predict(state_next_sample).squeeze()
-        # print(f'future_rewards: {future_rewards}')
         # Q value = reward + discount factor * expected future reward
         updated_q_values = rewards_sample + GAMMA * tf.reduce_max(future_rewards, axis=1)
         # print(f'updated_q_values: {updated_q_values}')
