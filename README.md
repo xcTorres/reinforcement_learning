@@ -24,10 +24,7 @@ $
 $$
 v_{*}(s) = \max_{\pi}v_{\pi}(s) \\ 
 q_{*}(s,a) = \max_{\pi}q_{\pi}(s,a) \\
-\pi_{*}(a|s)= \begin{cases} 1 & {if\;a=\arg\max_{a \in A}q_{*}(s,a)}\\ 0 & {else} \end{cases}
-$$
-
-$$
+\pi_{*}(a|s)= \begin{cases} 1 & {if\;a=\arg\max_{a \in A}q_{*}(s,a)}\\ 0 & {else} \end{cases} \\
 v_{*}(s) = \max_{a}q_{*}(s,a) \\
 q_{*}(s,a) = R_s^a + \gamma \sum\limits_{s' \in S}P_{ss'}^av_{*}(s') \\  
 v_{*}(s) = \max_a(R_s^a + \gamma \sum\limits_{s' \in S}P_{ss'}^av_{*}(s')) \\
